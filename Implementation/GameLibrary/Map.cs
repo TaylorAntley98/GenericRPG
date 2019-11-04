@@ -155,6 +155,9 @@ namespace GameLibrary {
         encounterChance = 0.15;
         Game.GetGame().ChangeState(GameState.FIGHTING);
       }
+      else if (layout[pos.row, pos.col] == 4) {
+                Game.GetGame().ChangeState(GameState.BOSSFIGHT);
+       }
       else {
         encounterChance += 0.10;
       }
